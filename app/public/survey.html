@@ -16,13 +16,12 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Compiled and minified Materialize CSS -->
+    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
-    <!-- Compiled and minified Materialize JavaScript -->
+    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -271,10 +270,10 @@
             $.post('/api/friends', userInput)
                 .done(function (data) {
                     // console.log('response = ' + JSON.stringify(data));
-                    // Set the name and image values of match
+                    // Set name and image values for match
                     $('#userMatch').html(data.matchName);
                     $("#userMatchImage").attr("src", data.matchImage);
-                    // Pop open the modal dialog
+                    // open the modal dialog
                     $('#modal1').modal('open');
                 });
         });
